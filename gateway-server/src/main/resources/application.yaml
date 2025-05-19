@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/api/customers/**
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/api/accounts/**
+        - id: card-service
+          uri: lb://card-service
+          predicates:
+            - Path=/api/cards/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: customer-service
+        url: /v3/api-docs/customer-service
+      - name: account-service
+        url: /v3/api-docs/account-service
+      - name: card-service
+        url: /v3/api-docs/card-service

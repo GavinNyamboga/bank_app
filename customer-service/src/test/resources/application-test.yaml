@@ -1,0 +1,4 @@
+customer-service:
+  url: http://customer-service:8081
+account-service:
+  url: http://account-service:8082
