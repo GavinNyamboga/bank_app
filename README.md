@@ -87,3 +87,6 @@ mvn test
 - `account-service`: Account management.
 - `card-service`: Card management.
 - `gateway-server`: API gateway.
+
+## Documentation
+- **Postman Documentation**: [Postman Collection](https://documenter.getpostman.com/view/3546820/2sB2qXk3ci#531d2fce-d47d-4436-8aa2-53617825c444)
